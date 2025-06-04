@@ -7,35 +7,42 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+      color: #2c2c2c;
+      line-height: 1.6;
     }
     header {
-      background-color: #0073e6;
+      background: linear-gradient(135deg, #0073e6, #004bbd);
       color: white;
-      padding: 2rem;
+      padding: 3rem 2rem;
       text-align: center;
     }
     header img {
-      height: 50px;
+      height: 60px;
       margin-bottom: 1rem;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      font-weight: 600;
     }
     header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
+      font-size: 1.25rem;
+      margin-top: 0.75rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
     section.features {
-      padding: 2rem;
+      padding: 4rem 2rem;
+      background-color: #ffffff;
       text-align: center;
     }
     .features h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #003d7a;
     }
     .feature-grid {
       display: flex;
@@ -44,50 +51,84 @@
       gap: 2rem;
     }
     .feature {
-      flex: 1 1 250px;
-      max-width: 300px;
-      background-color: #f4f4f4;
-      padding: 1rem;
-      border-radius: 8px;
+      flex: 1 1 300px;
+      max-width: 320px;
+      background-color: #f8f9fb;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+    .feature h3 {
+      font-size: 1.25rem;
+      color: #0056a4;
+    }
+    .feature p {
+      font-size: 0.95rem;
+      color: #444;
     }
     section.cta {
-      background-color: #0073e6;
+      background-color: #003d7a;
       color: white;
-      padding: 2rem;
+      padding: 3rem 2rem;
       text-align: center;
     }
     section.cta h2 {
       font-size: 2rem;
     }
     section.cta form {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
     input[type="email"] {
-      padding: 0.5rem;
-      width: 250px;
+      padding: 0.75rem;
+      width: 280px;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
+      font-size: 1rem;
     }
     input[type="submit"] {
-      padding: 0.5rem 1rem;
-      background-color: white;
-      color: #0073e6;
+      padding: 0.75rem 1.5rem;
+      background-color: #ffffff;
+      color: #003d7a;
+      font-weight: 600;
+      font-size: 1rem;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       margin-left: 1rem;
       cursor: pointer;
     }
+    section.founder {
+      padding: 3rem 2rem;
+      text-align: center;
+      background-color: #f4f6f8;
+    }
+    section.founder h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #003d7a;
+    }
+    section.founder p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: #444;
+    }
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #f4f4f4;
+      padding: 1.5rem;
+      background-color: #eaeaea;
+      font-size: 0.9rem;
     }
     .social {
       margin-top: 0.5rem;
     }
     .social a {
-      color: #0073e6;
+      color: #0056a4;
       text-decoration: none;
+      font-weight: 500;
     }
   </style>
 </head>
@@ -103,25 +144,54 @@
     <div class="feature-grid">
       <div class="feature">
         <h3>Swipe-Based Search</h3>
-        <p>Find properties faster with a swipe-first interface built for modern users.</p>
+        <p>Find properties faster with a swipe-first interface designed for mobile-first lifestyles. No more clunky filters, just smart, seamless discovery.</p>
       </div>
       <div class="feature">
         <h3>AI Personalisation</h3>
-        <p>Listo learns your preferences in real-time to deliver smarter results.</p>
+        <p>Listo learns your preferences instantly and improves results with every swipe, tailoring matches to what matters most to you.</p>
       </div>
       <div class="feature">
         <h3>Verified Leads for Agents</h3>
-        <p>Only pay for high-quality, verified leads. Better ROI, less waste.</p>
+        <p>Estate agents receive only pre-qualified, engaged leads ensuring higher conversions, less time wasted, and better ROI.</p>
+      </div>
+      <div class="feature">
+        <h3>Intelligent Alerts</h3>
+        <p>Get notified the moment a property that fits your style, budget or wishlist becomes available powered by machine learning.</p>
+      </div>
+      <div class="feature">
+        <h3>Simplified Experience</h3>
+        <p>No bloated dashboards. No endless lists. Just a streamlined, visual way to explore, shortlist, and move forward with confidence.</p>
+      </div>
+      <div class="feature">
+        <h3>For Renters & Buyers</h3>
+        <p>Whether you're moving for work, study or upgrading your family home, Listo works across rentals and sales, giving you options instantly.</p>
+      </div>
+      <div class="feature">
+        <h3>Blockchain-Powered Security</h3>
+        <p>Listo leverages blockchain technology to ensure data integrity and secure transaction history, enhancing transparency for both agents and users.</p>
+      </div>
+      <div class="feature">
+        <h3>Smart Contract Integration</h3>
+        <p>Automate key processes such as deposits and agreement execution using smart contracts making property transactions faster, cheaper and more trustworthy.</p>
+      </div>
+      <div class="feature">
+        <h3>Reservation & Holding Tools</h3>
+        <p>Reserve properties instantly through the platform with digital hold deposits. Eliminate back-and-forth and provide greater transaction certainty with a secure, commitment-based reservation process.</p>
       </div>
     </div>
   </section>
 
   <section class="cta">
     <h2>Get Early Access</h2>
-    <form>
-      <input type="email" placeholder="Enter your email">
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
       <input type="submit" value="Join the Waitlist">
     </form>
+  </section>
+
+  <section class="founder">
+    <h2>Meet the Founder</h2>
+    <p>Hi, I’m James Davis. With a background in property and launching my own investment group during COVID, I’ve seen firsthand how outdated and frustrating property searching can be. Listo is built to change that, fast, intelligent, and user-first.</p>
   </section>
 
   <footer>
