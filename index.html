@@ -1,9 +1,19 @@
-<!DOCTYPE html>More actions
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Listo - Smarter Property Search</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVCG3NK430"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WVCG3NK430');
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -29,19 +39,15 @@
     }
     header p {
       font-size: 1.25rem;
-      margin-top: 0.75rem;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0.75rem auto 0;
     }
-    section.features {
-      padding: 4rem 2rem;
-      background-color: #ffffff;
+    section {
+      padding: 3rem 2rem;
       text-align: center;
     }
     .features h2 {
       font-size: 2.5rem;
-      margin-bottom: 2rem;
       color: #003d7a;
     }
     .feature-grid {
@@ -49,38 +55,22 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
+      margin-top: 2rem;
     }
     .feature {
       flex: 1 1 300px;
       max-width: 320px;
-      background-color: #f8f9fb;
+      background: #f8f9fb;
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-    }
-    .feature:hover {
-      transform: translateY(-5px);
     }
     .feature h3 {
-      font-size: 1.25rem;
       color: #0056a4;
     }
-    .feature p {
-      font-size: 0.95rem;
-      color: #444;
-    }
-    section.cta {
+    .cta {
       background-color: #003d7a;
       color: white;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    section.cta h2 {
-      font-size: 2rem;
-    }
-    section.cta form {
-      margin-top: 1.5rem;
     }
     input[type="email"] {
       padding: 0.75rem;
@@ -91,46 +81,20 @@
     }
     input[type="submit"] {
       padding: 0.75rem 1.5rem;
-      background-color: #ffffff;
+      margin-left: 1rem;
+      background: #fff;
       color: #003d7a;
-      font-weight: 600;
+      font-weight: bold;
       font-size: 1rem;
       border: none;
       border-radius: 6px;
-      margin-left: 1rem;
       cursor: pointer;
     }
-    section.founder {
-      padding: 3rem 2rem;
-      text-align: center;
-      background-color: #f4f6f8;
-    }
-    section.founder h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #003d7a;
-    }
-    section.founder p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1rem;
-      color: #444;
-    }
     footer {
-      text-align: center;
+      background: #eaeaea;
       padding: 1.5rem;
-      background-color: #eaeaea;
       font-size: 0.9rem;
     }
-    .social {
-      margin-top: 0.5rem;
-    }
-    .social a {
-      color: #0056a4;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
     .swipe-card {
       position: absolute;
       top: 0;
@@ -140,9 +104,7 @@
       border-radius: 16px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
       transition: transform 1s ease, opacity 1s ease;
-      opacity: 1;
     }
-
     #card-container {
       position: relative;
       width: 300px;
@@ -151,17 +113,9 @@
       overflow: hidden;
     }
   </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVCG3NK430"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WVCG3NK430');
-  </script>
 </head>
 <body>
+
   <header>
     <img src="logo.png" alt="Listo logo">
     <h1>Listo</h1>
@@ -170,76 +124,71 @@
 
   <section class="features">
     <h2>Why Listo?</h2>
-  <div class="feature-grid">
-    <div class="feature">
-      <h3>Swipe-Based Search</h3>
-      <p>Find properties faster with a swipe-first interface designed for mobile-first lifestyles. No more clunky filters, just smart, seamless discovery.</p>
-    </div>
-    <div class="feature">
-      <h3>AI Personalisation</h3>
-      <p>Listo learns your preferences instantly and improves results with every swipe, tailoring matches to what matters most to you.</p>
-    </div>
-    <div class="feature">
-      <h3>Verified Leads for Agents</h3>
-      <p>Estate agents receive only pre-qualified, engaged leads ensuring higher conversions, less time wasted, and better ROI.</p>
-    </div>
-    <div class="feature">
-      <h3>Intelligent Alerts</h3>
-      <p>Get notified the moment a property that fits your style, budget or wishlist becomes available powered by machine learning.</p>
-    </div>
-    <div class="feature">
-      <h3>Simplified Experience</h3>
-      <p>No bloated dashboards. No endless lists. Just a streamlined, visual way to explore, shortlist, and move forward with confidence.</p>
-    </div>
-    <div class="feature">
-      <h3>For Renters & Buyers</h3>
-      <p>Whether you're moving for work, study or upgrading your family home, Listo works across rentals and sales, giving you options instantly.</p>
-    </div>
-    <div class="feature">
-      <h3>Blockchain-Powered Security</h3>
-      <p>Listo leverages blockchain technology to ensure data integrity and secure transaction history, enhancing transparency for both agents and users.</p>
-    </div>
-    <div class="feature">
-      <h3>Smart Contract Integration</h3>
-      <p>Automate key processes such as deposits and agreement execution using smart contracts making property transactions faster, cheaper and more trustworthy.</p>
-    </div>
-    <div class="feature">
-      <h3>Reservation & Holding Tools</h3>
-      <p>Reserve properties instantly through the platform with digital hold deposits. Eliminate back-and-forth and provide greater transaction certainty with a secure, commitment-based reservation process.</p>
-    </div>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>Swipe-Based Search</h3>
+        <p>Find properties faster with a swipe-first interface designed for mobile-first lifestyles.</p>
+      </div>
+      <div class="feature">
+        <h3>AI Personalisation</h3>
+        <p>Listo learns your preferences with every swipe, tailoring matches in real-time.</p>
+      </div>
+      <div class="feature">
+        <h3>Verified Leads for Agents</h3>
+        <p>Estate agents receive only pre-qualified, engaged leads ensuring better ROI.</p>
+      </div>
+      <div class="feature">
+        <h3>Intelligent Alerts</h3>
+        <p>Get notified the moment a matching property hits the market using smart notifications.</p>
+      </div>
+      <div class="feature">
+        <h3>Simplified Experience</h3>
+        <p>No bloated dashboards or lists. Just an intuitive, visual journey to finding your next home.</p>
+      </div>
+      <div class="feature">
+        <h3>For Renters & Buyers</h3>
+        <p>Whether you're renting or buying, Listo works for both with real-time matching.</p>
+      </div>
+      <div class="feature">
+        <h3>Blockchain Security</h3>
+        <p>Data is securely stored and auditable with blockchain technology for trust and compliance.</p>
+      </div>
+      <div class="feature">
+        <h3>Smart Contract Integration</h3>
+        <p>Automate deposits and agreement execution using secure smart contracts.</p>
+      </div>
+      <div class="feature">
+        <h3>Reservation & Holding Tools</h3>
+        <p>Reserve properties instantly through digital deposits. Less back-and-forth, more certainty.</p>
+      </div>
     </div>
   </section>
 
   <section class="cta">
     <h2>Get Early Access</h2>
-<form action="https://formspree.io/f/mpwrwdqp" method="POST" style="margin-top: 1.5rem;">
-  <input type="hidden" name="_redirect" value="https://jamesdavis95.github.io/Listo-landing/thanks.html">
-
-  <input type="email" name="email" placeholder="Enter your email" required 
-         style="padding: 0.75rem; width: 280px; border: none; border-radius: 6px; font-size: 1rem;">
-
-  <input type="submit" value="Join the Waitlist"
-         style="padding: 0.75rem 1.5rem; background-color: #ffffff; color: #003d7a; font-weight: 600; font-size: 1rem; border: none; border-radius: 6px; margin-left: 1rem; cursor: pointer;">
-</form>
-</section>
-
-  <section class="founder">
-    <h2>Meet the Founder</h2>
-    <p>Hi, I’m James Davis. With a background in property and launching my own investment group during COVID, I’ve seen firsthand how outdated and frustrating property searching can be. Listo is built to change that—fast, intelligent, and user-first.</p>
-    <p>Hi, I’m James Davis. With a background in property and launching my own investment group during COVID, I’ve seen firsthand how outdated and frustrating property searching can be. Listo is built to change that, fast, intelligent, and user-first.</p>
+    <form action="https://formspree.io/f/mpwrwdqp" method="POST">
+      <input type="hidden" name="_redirect" value="https://jamesdavis95.github.io/Listo-landing/thanks.html">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="submit" value="Join the Waitlist">
+    </form>
   </section>
 
-  <section class="tech-pricing" style="padding: 3rem 2rem; text-align: center; background-color: #ffffff;">
-    <h2 style="font-size: 2rem; color: #003d7a;">Technology & Pricing</h2>
-    <p style="max-width: 700px; margin: 1rem auto; font-size: 1rem; color: #444;">
-      Listo is powered by a modern tech stack that includes AI personalisation, blockchain-secured data layers, and smart contracts to automate property transactions.
+  <section>
+    <h2>Meet the Founder</h2>
+    <p>Hi, I’m James Davis. With a background in property and launching my own investment group during COVID, I’ve seen firsthand how outdated property search is. Listo is built to fix that — fast, intelligent, and user-first.</p>
+  </section>
+
+  <section>
+    <h2>Technology & Pricing</h2>
+    <p>
+      Listo is built on a modern stack using AI personalisation, blockchain data layers, and smart contracts.
       <br><br>
-      Our freemium model offers users a powerful free search experience, while agents pay to receive verified, qualified leads. Smart contract and secure deposit-handling integrations available for professional partners.
+      Our freemium model gives users a great experience for free, while agents pay to access verified leads.
     </p>
   </section>
 
-  <section class="preview" style="text-align: center; padding: 3rem 2rem; background-color: #f9fbfd;">
-    <h2 style="color:#003d7a; font-size: 2rem; margin-bottom: 1.5rem;">Product Preview</h2>
+  <section>
+    <h2>Product Preview</h2>
     <div id="card-container">
       <img src="demo1.jpg" class="swipe-card" style="z-index: 3;">
       <img src="demo2.jpg" class="swipe-card" style="z-index: 2;">
@@ -247,53 +196,49 @@
     </div>
   </section>
 
-  <section style="padding: 3rem 2rem; text-align: center; background-color: #ffffff;">
-  <h2 style="font-size: 2rem; color: #003d7a;">What's Next for Listo?</h2>
-  <p style="max-width: 700px; margin: 1rem auto; font-size: 1rem; color: #444;">
-    Listo is currently in the early build stage as we develop our MVP. With limited resources to date, we've focused on validating demand, refining the user experience, and preparing the foundations for a pilot with estate agents. We’re now seeking accelerator backing to support product development, technical build, and an initial launch in the UK market.
+  <section>
+    <h2>What's Next for Listo?</h2>
+    <p>
+      We’re developing our MVP and preparing a pilot with estate agents in the UK. We’ve validated demand and are ready to build further.
+    </p>
+  </section>
 
-    <section style="padding: 3rem 2rem; text-align: center; background-color: #ffffff;">
-  <h2 style="font-size: 2rem; color: #003d7a;">Early Momentum</h2>
-  <p style="max-width: 700px; margin: 1rem auto; font-size: 1rem; color: #444;">
-    Currently in pre-launch. We've received positive feedback on our concept from prospective users and agents, and are preparing to test our MVP with a small group.
-  </p>
-</section>
-  </p>
-<section style="text-align: center; padding: 3rem 2rem; background-color: #f0f4f8;">
-  <h2 style="color:#003d7a; font-size: 2rem;">Interested in Backing Listo?</h2>
-  <p style="max-width: 600px; margin: 0 auto; font-size: 1rem; color: #444;">
-    If you're an accelerator, investor or early partner interested in Listo, we'd love to hear from you.
-    <br><br>
-    <strong>Email:</strong> <a href="mailto:jaydavidavis@gmail.com">jaydaviddavis@gmail.com</a>
-  </p>
-</section>
+  <section>
+    <h2>Early Momentum</h2>
+    <p>
+      Currently in pre-launch. We've received strong feedback from users and agents and plan to begin live testing soon.
+    </p>
+  </section>
+
+  <section style="background:#f0f4f8;">
+    <h2>Interested in Backing Listo?</h2>
+    <p>
+      If you're an accelerator, investor or early partner, we’d love to hear from you.<br><br>
+      <strong>Email:</strong> <a href="mailto:jaydaviddavis@gmail.com">jaydaviddavis@gmail.com</a>
+    </p>
+  </section>
 
   <footer>
-    &copy; 2025 Listo. All rights reserved.
-    <div class="social">
-      <a href="https://www.linkedin.com/company/listo-homes/" target="_blank">Follow us on LinkedIn</a>
-    </div>
+    &copy; 2025 Listo. All rights reserved.<br>
+    <a href="https://www.linkedin.com/company/listo-homes/" target="_blank">Follow us on LinkedIn</a>
   </footer>
 
   <script>
     const cards = document.querySelectorAll('.swipe-card');
     let index = 0;
-
     function cycleCards() {
       const total = cards.length;
-
       cards.forEach((card, i) => {
         const offset = (i - index + total) % total;
         card.style.zIndex = total - offset;
         card.style.transform = `translateX(${offset * 20}px) rotate(${offset === 0 ? 0 : offset > 1 ? 5 : -5}deg)`;
         card.style.opacity = offset === 0 ? 1 : 0.5;
       });
-
       index = (index + 1) % total;
     }
-
     setInterval(cycleCards, 3000);
     cycleCards();
   </script>
+
 </body>
 </html>
