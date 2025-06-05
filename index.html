@@ -4,18 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Listo - Smarter Property Search</title>
- 
-<!-- Google Analytics tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVCG3NK430"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SQPJCBBH6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WVCG3NK430');
-    gtag('config', 'G-1SQPJCBBH6');
-  </script>
-  
   <style>
     body {
       margin: 0;
@@ -297,7 +285,7 @@
       cards.forEach((card, i) => {
         const offset = (i - index + total) % total;
         card.style.zIndex = total - offset;
-        card.style.transform = translateX(${offset * 20}px) rotate(${offset === 0 ? 0 : offset > 1 ? 5 : -5}deg);
+        card.style.transform = `translateX(${offset * 20}px) rotate(${offset === 0 ? 0 : offset > 1 ? 5 : -5}deg)`;
         card.style.opacity = offset === 0 ? 1 : 0.5;
       });
 
